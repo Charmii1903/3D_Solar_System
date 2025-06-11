@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Speed Panel */
+#controls {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+  max-height: 90vh;
+  overflow-y: auto;
+  min-width: 180px;
+}
+
+#controls label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+#controls input[type="range"] {
+  width: 100%;
+  margin-bottom: 12px;
+  appearance: none;
+  height: 4px;
+  background: #4ecdc4;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Speed Button */
+#speedToggleBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 16px;
+  background-color: #4ecdc4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 100;
+}
+
+/* Pause Button */
+#toggleBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background: #4ecdc4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Theme Button */
+#themeBtn {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  padding: 8px 12px;
+  background: #4ecdc4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Background Image (if used) */
+#themeImage {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  height: auto;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+  #controls {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+  }
+
+  #speedToggleBtn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #themeImage {
+    width: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #toggleBtn,
+  #themeBtn {
+    right: 10px;
+    width: auto;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #controls label {
+    font-size: 12px;
+  }
+}
+/* Default: Desktop (left side) */
+#speedDropdown,
+#advancedToggleBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 6px;
+  background: #4ecdc4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#advancedToggleBtn {
+  left: 150px;
+}
+
+/*  Mobile View */
+@media (max-width: 600px) {
+  #speedDropdown,
+  #advancedToggleBtn {
+    top: 10px;
+    left: auto;
+    right: 230px;
+    width: auto;
+    margin-right: 0;
+    font-size: 13px;
+  }
+
+  #advancedToggleBtn {
+    top: 50px;
+  }
+
+  #controls {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+  }
+}
