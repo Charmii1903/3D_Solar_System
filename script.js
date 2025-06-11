@@ -48,7 +48,7 @@ function createStars(texturePath) {
   scene.add(starSphere);
 }
 
-// Call it with initial dark texture
+
 createStars('textures/stars.jpg');
 
 
@@ -191,7 +191,7 @@ document.getElementById("themeBtn").addEventListener("click", () => {
   const bg = darkMode ? "#0d1b2a" : "#4ecdc4";
   document.body.style.backgroundColor = bg;
 
-  // 🌌 Change star background texture in 3D scene
+  
   const newTexture = darkMode ? "textures/dark.jpg" : "textures/stars.jpg";
   textureLoader.load(newTexture, (loadedTexture) => {
     starMat.map = loadedTexture;
